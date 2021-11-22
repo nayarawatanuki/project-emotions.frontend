@@ -138,8 +138,8 @@ function Task3() {
     React.createClass({
       componentWillMount: function(){
         React.initializeTouchEvents(true);
-      },
-  };
+      }
+  })}
 
   return (
     <App>
