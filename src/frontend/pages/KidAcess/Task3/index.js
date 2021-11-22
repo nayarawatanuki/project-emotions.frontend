@@ -155,8 +155,10 @@ function Task3() {
                     onDrop={()=> {                        
                       if( response === task.emotion ) {                        
                         stopTime();
-                        openReward();
-                        sendTask();
+                        openReward()
+                        .then(() => {
+                          sendTask();
+                        })
                       } else {
                         setTries(tries+1);
                         console.log('tentativas: ', tries);
