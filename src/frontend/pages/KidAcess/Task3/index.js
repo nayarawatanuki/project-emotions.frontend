@@ -80,7 +80,7 @@ function Task3() {
 
   async function drag(e) {
     await e.preventDefault();
-    e.dataTransfer.effectAllowed == 'move';
+    //e.dataTransfer.effectAllowed == 'move';
     //e.dataTransfer.setData("text/html", e.target.id);
   }
 
