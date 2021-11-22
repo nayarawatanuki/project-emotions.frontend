@@ -79,7 +79,7 @@ function Task3() {
   }
 
   async function drag(e) {
-    await e.preventDefault();
+    await
     e.dataTransfer.setData("text", e.target.id);
   }
 
@@ -150,7 +150,7 @@ function Task3() {
             return (
               <form encType='multipar/form-data' fit-content="true" key={task.id}>
                 <div className='row' style={{marginTop: '2%', justifyContent: 'center'}}>
-                  <img display="center"
+                  <img display="center" width='auto' height='auto'
                     onDragOver={(e)=> allowDrop(e)} 
                     onDrop={()=> {                        
                       if( response === task.emotion ) {                        
