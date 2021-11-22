@@ -6,7 +6,6 @@ import '../../../global/styles/fireworks/style.css';
 import '../../../global/styles/instruction/style.css';
 import GlobalStyle from '../../../global/styles';
 import { App, Container, Content, Label } from './styles';
-import Upload from '../../../components/RespDrop';
 
 import { Link, useHistory } from 'react-router-dom';
 import { useKidContext } from '../../../context/kidContext';
@@ -150,7 +149,10 @@ function Task3() {
           {task.map((task) => {
             return (
               <form encType='multipar/form-data' fit-content="true" key={task.id}>
-                <Upload onUpload= {()=> {                        
+                <div className='row' style={{marginTop: '2%', justifyContent: 'center'}}>
+                  <img display="center"
+                    onDragOver={(e)=> allowDrop(e)} 
+                    onDrop={()=> {                        
                       if( response === task.emotion ) {                        
                         stopTime();
                         openReward();
@@ -168,15 +170,11 @@ function Task3() {
                           document.getElementById('emotion3').style.boxShadow = '0 0 1em green';
                         }
                       }
-                    }}> 
-                  <img display="center"
-                    onDragOver={(e)=> allowDrop(e)} 
-                    
+                    }}
                     align="center"  
-                    src={task.image}
+                    src={task.image} 
                   />
-                  </Upload>
-      
+                </div>
 
                 <div className="row" style={{marginTop: '5%', justifyContent: 'center'}}>
                   <Label id="emotion1" name="emotion1" 
