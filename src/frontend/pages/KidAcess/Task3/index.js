@@ -6,7 +6,7 @@ import '../../../global/styles/fireworks/style.css';
 import '../../../global/styles/instruction/style.css';
 import GlobalStyle from '../../../global/styles';
 import { App, Container, Content, Label } from './styles';
-import Dropzone from 'react-dropzone';
+import Upload from '../../../components/RespDrop';
 
 import { Link, useHistory } from 'react-router-dom';
 import { useKidContext } from '../../../context/kidContext';
@@ -150,7 +150,7 @@ function Task3() {
           {task.map((task) => {
             return (
               <form encType='multipar/form-data' fit-content="true" key={task.id}>
-                <Dropzone className='row' style={{marginTop: '2%', justifyContent: 'center'}}>
+                <Upload> 
                   <img display="center"
                     onDragOver={(e)=> allowDrop(e)} 
                     onDrop={()=> {                        
@@ -173,9 +173,10 @@ function Task3() {
                       }
                     }}
                     align="center"  
-                    src={task.image} 
+                    src={task.image}
                   />
-                </Dropzone>
+                  </Upload>
+      
 
                 <div className="row" style={{marginTop: '5%', justifyContent: 'center'}}>
                   <Label id="emotion1" name="emotion1" 
