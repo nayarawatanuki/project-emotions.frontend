@@ -178,8 +178,8 @@ function Task3() {
                 </div>
 
                 <div className="row" style={{marginTop: '5%', justifyContent: 'center'}}>
-                  <Draggable cancel=".btn" >
-                  <button id="emotion1" name="emotion1" className='btn'
+                  <Draggable >
+                  <button id="emotion1" name="emotion1"
                     
                     value={task.response1}
                    
