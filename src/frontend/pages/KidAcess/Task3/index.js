@@ -135,10 +135,10 @@ function Task3() {
   }
 
   const isTouchDevice = () => {
-    if ("ontouchstart" in window) {
-      return true;
-    }
-    return false;
+    React.createClass({
+      componentWillMount: function(){
+        React.initializeTouchEvents(true);
+      },
   };
 
   return (
@@ -189,7 +189,7 @@ function Task3() {
                       style={{marginRight: '4%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                       value={task.response1}
                       draggable={true} 
-                      
+                      touchable={true}
                       onTouchMove={true}
                       
                       onDragStart={(e)=> {drag(e); setResponse(task.response1)}}
