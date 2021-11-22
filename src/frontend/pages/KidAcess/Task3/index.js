@@ -151,7 +151,7 @@ function Task3() {
             return (
               <form encType='multipar/form-data' fit-content="true" key={task.id}>
                 <div className='row' style={{marginTop: '2%', justifyContent: 'center'}}>
-                  <img fit-content="true" display="center"
+                  <img display="center"
                     onDragOver={(e)=> allowDrop(e)} 
                     onDrop={()=> {                        
                       if( response === task.emotion ) {                        
@@ -178,22 +178,16 @@ function Task3() {
                 </div>
 
                 <div className="row" style={{marginTop: '5%', justifyContent: 'center'}}>
-                  
-                  <button id="emotion1" name="emotion1"
+                  <Draggable id="emotion1" name="emotion1"
                     
-                    value={task.response1}
-                   draggable={true}
-                   onTouchStart={true}
-                   onClick={(e) => {drag(e)}}
                     
                     >{task.response1}
-                  </button>
                   
+                  </Draggable>
 
                   <Label id="emotion2" name="emotion2" style={{marginRight: '4%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response2} 
                     draggable={true} 
-
                     onDragStart={(e)=> {drag(e); setResponse(task.response2)}}
                     >{task.response2}
                   </Label>
