@@ -150,10 +150,7 @@ function Task3() {
           {task.map((task) => {
             return (
               <form encType='multipar/form-data' fit-content="true" key={task.id}>
-                <Upload> 
-                  <img display="center"
-                    onDragOver={(e)=> allowDrop(e)} 
-                    onDrop={()=> {                        
+                <Upload onUpload= {()=> {                        
                       if( response === task.emotion ) {                        
                         stopTime();
                         openReward();
@@ -171,7 +168,10 @@ function Task3() {
                           document.getElementById('emotion3').style.boxShadow = '0 0 1em green';
                         }
                       }
-                    }}
+                    }}> 
+                  <img display="center"
+                    onDragOver={(e)=> allowDrop(e)} 
+                    
                     align="center"  
                     src={task.image}
                   />
