@@ -176,7 +176,7 @@ function Task3() {
                   />
                 </div>
 
-                <div   style={{marginTop: '5%', justifyContent: 'center'}}>
+                <div className='row' style={{marginTop: '5%', justifyContent: 'center'}}>
                   <Label id="emotion1" name="emotion1" 
                     style={{marginRight: '4%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response1}
@@ -190,13 +190,15 @@ function Task3() {
                   <Label id="emotion2" name="emotion2" style={{marginRight: '4%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response2} 
                     draggable={true} 
+                    onTouchStart={true}
                     onDragStart={(e)=> {drag(e); setResponse(task.response2)}}
                     >{task.response2}
                   </Label>
 
                   <Label id="emotion3" name="emotion3" style={{border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response3}
-                    draggable={true} 
+                    draggable={true}
+                    onTouchStart={true}
                     onDragStart={(e)=> {drag(e); setResponse(task.response3)}}
                     >{task.response3}
                   </Label>
