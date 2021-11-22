@@ -79,7 +79,8 @@ function Task3() {
   }
 
   async function drag(e) {
-    await e.dataTransfer.setData("text", e.target.id);
+    await e.dataTransfer.effectAllowed == 'move';
+    e.dataTransfer.setData("text/html", e.target.id);
   }
 
   async function drop(e) {
