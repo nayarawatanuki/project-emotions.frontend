@@ -151,7 +151,7 @@ function Task3() {
             return (
               <form encType='multipar/form-data' fit-content="true" key={task.id}>
                 <div className='row' style={{marginTop: '2%', justifyContent: 'center'}}>
-                  <img display="center"
+                  <img fit-content="true" display="center"
                     onDragOver={(e)=> allowDrop(e)} 
                     onDrop={()=> {                        
                       if( response === task.emotion ) {                        
@@ -183,8 +183,7 @@ function Task3() {
                     
                     value={task.response1}
                    draggable={true}
-                   onTouchStart={true}
-                    
+                   onTouchStart={true, () => {this.draggable=true}}
                     
                     >{task.response1}
                   </button>
