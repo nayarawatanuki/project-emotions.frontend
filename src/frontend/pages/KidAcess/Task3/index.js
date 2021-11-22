@@ -80,7 +80,7 @@ function Task3() {
 
   async function drag(e) {
     await e.preventDefault();
-    e.dataTransfer.setData("text/html", e.target.id);
+    e.dataTransfer.setData("text", e.target.id);
   }
 
   async function drop(e) {
