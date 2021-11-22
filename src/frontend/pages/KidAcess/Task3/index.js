@@ -70,6 +70,9 @@ function Task3() {
           title: reward.message, 
           icon: reward.photo
         })
+        .then(() => {
+          sendTask();
+        })
       )
     })
   }
@@ -78,8 +81,8 @@ function Task3() {
     await e.preventDefault();
   }
 
-  function drag(e) {
-    
+  async function drag(e) {
+    await
     e.dataTransfer.setData("text", e.target.id);
   }
 
@@ -155,10 +158,7 @@ function Task3() {
                     onDrop={()=> {                        
                       if( response === task.emotion ) {                        
                         stopTime();
-                        openReward()
-                        .then(() => {
-                          sendTask();
-                        })
+                        openReward();
                       } else {
                         setTries(tries+1);
                         console.log('tentativas: ', tries);
@@ -192,8 +192,8 @@ function Task3() {
                   <Label id="emotion2" name="emotion2" style={{marginRight: '4%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response2} 
                     draggable={true} 
-                    onTouchStart={true}
-                    onDragStart={(e)=> {drag(e); setResponse(task.response2)}}
+                    onTouchStart={true, (e)=> drag(e)}
+                    onDragStart={()=> { setResponse(task.response2)}}
                     >{task.response2}
                   </Label>
 
