@@ -183,7 +183,7 @@ function Task3() {
                     
                     value={task.response1}
                    draggable={true}
-                   onTouchStart={true, () => {this.draggable=true}}
+                   onTouchStart={true, (e) => {drag(e)}}
                     
                     >{task.response1}
                   </button>
