@@ -6,10 +6,13 @@ import '../../../global/styles/fireworks/style.css';
 import '../../../global/styles/instruction/style.css';
 import GlobalStyle from '../../../global/styles';
 import { App, Container, Content, Label } from './styles';
+import { DndProvider } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
 import { Link, useHistory } from 'react-router-dom';
 import { useKidContext } from '../../../context/kidContext';
 import { useTaskContext } from '../../../context/taskContext';
+import { Draggable } from 'react-beautiful-dnd';
 
 function Task3() {
   const {kid_name} = useKidContext();
@@ -214,6 +217,10 @@ function Task3() {
               </form>
             )
           })}
+
+          <DndProvider backend={HTML5Backend}>
+            <Draggable><p>dragme</p></Draggable>
+          </DndProvider>
 
           <div className="row" style={{marginTop: '5%', justifyContent: 'right'}}>
             <button className="button button-save"
