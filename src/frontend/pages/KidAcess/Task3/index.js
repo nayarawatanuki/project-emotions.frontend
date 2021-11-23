@@ -152,7 +152,7 @@ function Task3() {
             return (
               <form encType='multipar/form-data' fit-content="true" key={task.id}>
                 <div className='row' style={{marginTop: '2%', justifyContent: 'center'}}>
-                  <img className="img-responsive" display="center"  style={{width:'100px', resize: 'auto', border: '5px double #000'}}
+                  <img className="img-responsive" display="center"  style={{width:'200px', resize: 'auto', border: '5px double #000'}}
                     onDragOver={(e)=> allowDrop(e)} 
                     onDrop={()=> {                       
                       if( response === task.emotion ) {                        
