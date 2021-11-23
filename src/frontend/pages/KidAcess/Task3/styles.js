@@ -9,7 +9,7 @@ export const App = styled.div`
 `;
 
 export const Container = styled.div`
-    
+    content="width=device-width, initial-scale=1";
     height: auto 100%;
     margin: 5%;
     display: flex;

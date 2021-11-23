@@ -226,7 +226,7 @@ function Task3() {
             )
           })}
 
-          <div className="row" style={{marginTop: '10%', justifyContent: 'right'}}>
+          <div className="row" style={{marginTop: '15%', justifyContent: 'right'}}>
             <button className="button button-save"
               onClick={(e) => {
                 swal({
