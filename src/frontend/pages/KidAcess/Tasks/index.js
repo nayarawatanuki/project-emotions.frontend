@@ -46,7 +46,7 @@ function Tasks() {
 
             <Container>
                 <Content>
-                    <form content="width=device-width, initial-scale=1" fit-content="true" margin='4%'>
+                    <form >
                         <div className="form-row">
                             {kid.map((kid) => {
                                 savePhoto(kid.photo);

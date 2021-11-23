@@ -150,9 +150,9 @@ function Task3() {
         <Content>
           {task.map((task) => {
             return (
-              <form encType='multipar/form-data' content="width=device-width, initial-scale=1" fit-content="true" key={task.id}>
+              <form encType='multipar/form-data' content="width=device-width, initial-scale=1" fit-content="true" key={task.id} margin='4%'>
                 <div className='row' fit-content="true" style={{marginTop: '2%', justifyContent: 'center'}}>
-                  <img className="img-responsive" display="center" content="width=device-width, initial-scale=1"
+                  <img className="img-responsive" display="center" content="width=device-width, initial-scale=1"  style={{ resize: 'auto'}}
                     onDragOver={(e)=> allowDrop(e)} 
                     onDrop={()=> {                       
                       if( response === task.emotion ) {                        
@@ -177,7 +177,7 @@ function Task3() {
                   />
                 </div>
                 
-                <div className='row' style={{marginTop: '7%', justifyContent: 'center'}}>
+                <div className='row' style={{marginTop: '10%', justifyContent: 'center'}}>
                   <Label id="emotion1" name="emotion1" 
                     style={{marginRight: '6%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response1}

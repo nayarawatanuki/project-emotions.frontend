@@ -10,14 +10,14 @@ export const App = styled.div`
 
 export const Container = styled.div`
     height: auto 100%;
-    margin: 5%;
-    display: auto;
+    margin-top: 4%;
+    display: flex;
     justify-content: center;
     align-items: center;
 `;
 
 export const Content = styled.div`
-    width: auto;
+    width: 70%;
     height: auto 100%;
     margin: auto;
     display: center;
