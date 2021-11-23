@@ -151,8 +151,7 @@ function Task3() {
           {task.map((task) => {
             return (
               <form encType='multipar/form-data' fit-content="true" key={task.id}>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <div className='row' style={{marginTop: '2%', justifyContent: 'center'}}>
+                <div className='row' fit-content="true" style={{marginTop: '2%', justifyContent: 'center'}}>
                   <img className="img-responsive" display="center" content="width=device-width, initial-scale=1"  style={{ resize: 'auto', border: '5px double #000'}}
                     onDragOver={(e)=> allowDrop(e)} 
                     onDrop={()=> {                       
