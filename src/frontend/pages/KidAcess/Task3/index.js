@@ -188,7 +188,7 @@ function Task3() {
                     draggable={true}
                     onTouchStart={true}
                     onDragStart={(e)=> {drag(e); if (window.navigator.vibrate) {
-                      window.navigator.vibrate(100);
+                      window.navigator.vibrate(200);
                     }
                    setResponse(task.response1)}}
                     >{task.response1}
