@@ -179,18 +179,18 @@ function Task3() {
                 </div>
                 
                 <div className='row' style={{marginTop: '10%', justifyContent: 'center'}}>
-                  <Label id="emotion1" name="emotion1" className="emotion1"
+                  <Label id="emotion1" name="emotion1" 
                     style={{marginRight: '6%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response1}
                     draggable={true}
-                    onTouchStart={true}
-                    onDragStart={(e)=> {
+                    onTouchStart={(e)=> {
                       if (window.navigator.vibrate) {
                         window.navigator.vibrate(200)
                       }
                       drag(e); 
                       setResponse(task.response1);
                     }}
+                    onDragStart={true}
                     >{task.response1}
                   </Label>
                 
