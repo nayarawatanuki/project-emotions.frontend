@@ -6,7 +6,7 @@ import '../../../global/styles/fireworks/style.css';
 import '../../../global/styles/instruction/style.css';
 import GlobalStyle from '../../../global/styles';
 import { App, Container, Content, Label } from './styles';
-import { Swipeable } from 'react-touch';
+import { useSwipeable } from "react-swipeable";
 
 import { Link, useHistory } from 'react-router-dom';
 import { useKidContext } from '../../../context/kidContext';
@@ -137,6 +137,12 @@ function Task3() {
     history.push('/Tasks');
   }
 
+  const handlers = useSwipeable({
+    
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  });
+
   return (
     <App>
       <nav className="navbar navbar-light bg-light">
@@ -181,7 +187,7 @@ function Task3() {
 
                 <div className='row' style={{marginTop: '5%', justifyContent: 'center'}}>
                 <Swipeable>
-                  <Label id="emotion1" name="emotion1" 
+                  <Label {...handlers} id="emotion1" name="emotion1" 
                     style={{marginRight: '4%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response1}
                     draggable={true}
