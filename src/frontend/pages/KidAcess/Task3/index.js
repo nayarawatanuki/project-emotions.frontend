@@ -6,13 +6,10 @@ import '../../../global/styles/fireworks/style.css';
 import '../../../global/styles/instruction/style.css';
 import GlobalStyle from '../../../global/styles';
 import { App, Container, Content, Label } from './styles';
-import { DndProvider } from 'react-dnd';
-import HTML5Backend from 'react-dnd-html5-backend';
 
 import { Link, useHistory } from 'react-router-dom';
 import { useKidContext } from '../../../context/kidContext';
 import { useTaskContext } from '../../../context/taskContext';
-import { Draggable } from 'react-beautiful-dnd';
 
 function Task3() {
   const {kid_name} = useKidContext();
@@ -156,7 +153,7 @@ function Task3() {
             return (
               <form encType='multipar/form-data' fit-content="true" key={task.id}>
                 <div className='row' style={{marginTop: '2%', justifyContent: 'center'}}>
-                  <img display="center" width='auto'
+                  <img display="center" width='100%'
                     onDragOver={(e)=> allowDrop(e)} 
                     onDrop={()=> {                        
                       if( response === task.emotion ) {                        
@@ -180,20 +177,20 @@ function Task3() {
                     src={task.image} 
                   />
                 </div>
-
-                
                 
                 <div className='row' style={{marginTop: '5%', justifyContent: 'center'}}>
-                
                   <Label id="emotion1" name="emotion1" 
                     style={{marginRight: '4%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response1}
                     draggable={true}
                     onTouchStart={true}
-                    onDragStart={(e)=> {drag(e); if (window.navigator.vibrate) {
-                      window.navigator.vibrate(200);
-                    }
-                   setResponse(task.response1)}}
+                    onDragStart={(e)=> {
+                      if (window.navigator.vibrate) {
+                        window.navigator.vibrate(200)
+                      }
+                      drag(e); 
+                      setResponse(task.response1);
+                    }}
                     >{task.response1}
                   </Label>
                 
@@ -202,7 +199,13 @@ function Task3() {
                     value={task.response2} 
                     draggable={true} 
                     onTouchStart={true}
-                    onDragStart={(e)=> {drag(e); setResponse(task.response2)}}
+                    onDragStart={(e)=> {
+                      if (window.navigator.vibrate) {
+                        window.navigator.vibrate(200)
+                      }
+                      drag(e); 
+                      setResponse(task.response2);
+                    }}
                     >{task.response2}
                   </Label>
 
@@ -210,17 +213,19 @@ function Task3() {
                     value={task.response3}
                     draggable={true}
                     onTouchStart={true}
-                    onDragStart={(e)=> {drag(e); setResponse(task.response3)}}
+                    onDragStart={(e)=> {
+                      if (window.navigator.vibrate) {
+                        window.navigator.vibrate(200)
+                      }
+                      drag(e); 
+                      setResponse(task.response3);
+                    }}
                     >{task.response3}
                   </Label>
                 </div>                
               </form>
             )
           })}
-
-          <DndProvider backend={HTML5Backend}>
-            <Draggable><p>dragme</p></Draggable>
-          </DndProvider>
 
           <div className="row" style={{marginTop: '5%', justifyContent: 'right'}}>
             <button className="button button-save"
