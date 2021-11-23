@@ -9,6 +9,7 @@ export const App = styled.div`
 `;
 
 export const Container = styled.div`
+    content: width=device-width, initial-scale=1;
     height: auto 100%;
     margin: 10%;
     display: flex;
@@ -17,7 +18,6 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-    content: width=device-width, initial-scale=1;
     height: auto 100%;
     margin: auto;
     display: auto;
