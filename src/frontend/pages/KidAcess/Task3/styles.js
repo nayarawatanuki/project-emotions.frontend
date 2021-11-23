@@ -41,7 +41,7 @@ export const Table = styled.table`
 
 export const Label = styled.box`
     border-radius: 17%;
-    width: 100px;
+    width: content;
     height: 30px;
     float: auto;
     resize: auto;
