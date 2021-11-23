@@ -10,17 +10,17 @@ export const App = styled.div`
 
 export const Container = styled.div`
     height: auto 100%;
-    margin-top: 4%;
+    margin: 7%;
     display: flex;
     justify-content: center;
     align-items: center;
 `;
 
 export const Content = styled.div`
-    width: auto;
+    width: fit-content;
     height: auto 100%;
     margin: auto;
-    display: center;
+    display: auto;
     float: center;
     background: #FFF;
     border-radius: 10px;

@@ -43,7 +43,7 @@ function KidAcess() {
         
             <Container>
                 <Content>
-                    <form> 
+                    <form content="width=device-width, initial-scale=1" fit-content="true" margin='4%'> 
                         <h1>Vamos começar?</h1>
 
                         <div className="form-group">
