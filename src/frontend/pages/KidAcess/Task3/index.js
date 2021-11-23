@@ -190,7 +190,7 @@ function Task3() {
                       drag(e); 
                       setResponse(task.response1);
                     }}
-                    onDragStart={true}
+                    //onDragStart={true}
                     >{task.response1}
                   </Label>
                 
