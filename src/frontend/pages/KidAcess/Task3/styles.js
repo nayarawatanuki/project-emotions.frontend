@@ -31,7 +31,7 @@ export const Content = styled.div`
 
 export const Label = styled.div`
     border-radius: 17%;
-    width: content;
+    width: 80px;
     height: 30px;
     float: auto;
     resize: auto;

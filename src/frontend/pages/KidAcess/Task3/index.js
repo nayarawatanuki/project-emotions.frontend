@@ -142,10 +142,9 @@ function Task3() {
         <div>
           <button className="button button-danger" onClick={() => history.push('/Tasks')}>SAIR</button>
         </div>
-        <h4 className="instruction" >
+        <h5 className="instruction" >
           Associando palavra a imagem {'>>'} <br/>
-        </h4>
-        <h1></h1>     
+        </h5>     
       </nav>
       <Container>
         <Content>
@@ -153,7 +152,7 @@ function Task3() {
             return (
               <form encType='multipar/form-data' fit-content="true" key={task.id}>
                 <div className='row' style={{marginTop: '2%', justifyContent: 'center'}}>
-                  <img display="center" width='fit-content' style={{resize: 'auto'}}
+                  <img display="center" width='content' style={{resize: 'auto'}}
                     onDragOver={(e)=> allowDrop(e)} 
                     onDrop={()=> {                       
                       if( response === task.emotion ) {                        
