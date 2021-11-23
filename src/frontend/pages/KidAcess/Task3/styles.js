@@ -10,6 +10,7 @@ export const App = styled.div`
 
 export const Container = styled.div`
     content: width=device-width, initial-scale=1;
+    width: fit-content;
     height: auto 100%;
     margin: 5%;
     display: auto;
