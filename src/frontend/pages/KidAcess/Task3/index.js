@@ -6,6 +6,7 @@ import '../../../global/styles/fireworks/style.css';
 import '../../../global/styles/instruction/style.css';
 import GlobalStyle from '../../../global/styles';
 import { App, Container, Content, Label } from './styles';
+import {Draggable} from 'react-beautiful-dnd';
 
 import { Link, useHistory } from 'react-router-dom';
 import { useKidContext } from '../../../context/kidContext';
@@ -178,6 +179,8 @@ function Task3() {
                   />
                 </div>
 
+                <Draggable>{task.reponse1}</Draggable>
+                
                 <div className='row' style={{marginTop: '5%', justifyContent: 'center'}}>
                 
                   <Label id="emotion1" name="emotion1" 
@@ -185,7 +188,7 @@ function Task3() {
                     value={task.response1}
                     draggable={true}
                     onTouchStart={true}
-                    onDragStart={(e)=> {drag(e); setResponse(task.response1)}}
+                    onDragStart={(e)=> {drag(e);  setResponse(task.response1)}}
                     >{task.response1}
                   </Label>
                 
