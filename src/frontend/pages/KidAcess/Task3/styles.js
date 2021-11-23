@@ -39,7 +39,7 @@ export const Table = styled.table`
     text-align: center;
 `;
 
-export const Label = styled.box`
+export const Label = styled.div`
     border-radius: 17%;
     width: content;
     height: 30px;
