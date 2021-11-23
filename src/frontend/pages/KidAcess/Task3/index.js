@@ -155,7 +155,8 @@ function Task3() {
                 <div className='row' style={{marginTop: '2%', justifyContent: 'center'}}>
                   <img display="center" width='100%'
                     onDragOver={(e)=> allowDrop(e)} 
-                    onDrop={()=> {                        
+                    onDrop={()=> {        
+                      drop(e);                
                       if( response === task.emotion ) {                        
                         stopTime();
                         openReward();
@@ -219,7 +220,6 @@ function Task3() {
                       }
                       drag(e); 
                       setResponse(task.response3);
-                      drop(e);
                     }}
                     >{task.response3}
                   </Label>
