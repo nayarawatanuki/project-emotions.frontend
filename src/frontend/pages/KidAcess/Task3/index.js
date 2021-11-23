@@ -179,7 +179,7 @@ function Task3() {
                   />
                 </div>
 
-                <Draggable>drag me</Draggable>
+                
                 
                 <div className='row' style={{marginTop: '5%', justifyContent: 'center'}}>
                 
@@ -212,6 +212,8 @@ function Task3() {
               </form>
             )
           })}
+
+          <Draggable>drag me</Draggable>
 
           <div className="row" style={{marginTop: '5%', justifyContent: 'right'}}>
             <button className="button button-save"
