@@ -6,7 +6,7 @@ import '../../../global/styles/fireworks/style.css';
 import '../../../global/styles/instruction/style.css';
 import GlobalStyle from '../../../global/styles';
 import { App, Container, Content, Label } from './styles';
-import {Draggable} from 'react-beautiful-dnd';
+import {Draggable, Droppable, DragDropContext} from 'react-beautiful-dnd';
 
 import { Link, useHistory } from 'react-router-dom';
 import { useKidContext } from '../../../context/kidContext';
@@ -213,7 +213,12 @@ function Task3() {
             )
           })}
 
-          <Draggable><p>drag me</p></Draggable>
+          <DragDropContext>
+            <Droppable>
+              <Draggable><p>drag me</p></Draggable>
+            </Droppable>
+          </DragDropContext>
+
 
           <div className="row" style={{marginTop: '5%', justifyContent: 'right'}}>
             <button className="button button-save"
