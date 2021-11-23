@@ -2,6 +2,7 @@ import React, { useState, useEffect, useLayoutEffect } from 'react';
 import swal from '@sweetalert/with-react'
 import api from '../../../services/api';
 
+import './style.css'
 import '../../../global/styles/fireworks/style.css';
 import '../../../global/styles/instruction/style.css';
 import GlobalStyle from '../../../global/styles';
@@ -178,7 +179,7 @@ function Task3() {
                 </div>
                 
                 <div className='row' style={{marginTop: '10%', justifyContent: 'center'}}>
-                  <Label id="emotion1" name="emotion1" 
+                  <Label id="emotion1" name="emotion1" className="emotion1"
                     style={{marginRight: '6%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response1}
                     draggable={true}
