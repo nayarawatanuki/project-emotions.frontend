@@ -179,7 +179,7 @@ function Task3() {
                   />
                 </div>
 
-                <Draggable>{task.reponse1}</Draggable>
+                <Draggable>drag me</Draggable>
                 
                 <div className='row' style={{marginTop: '5%', justifyContent: 'center'}}>
                 
