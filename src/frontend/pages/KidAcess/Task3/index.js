@@ -138,11 +138,11 @@ function Task3() {
 
   return (
     <App>
-      <nav className="navbar navbar-light bg-light">
+      <nav className="navbar navbar-light bg-light" fit-content="true">
         <div>
           <button className="button button-danger" onClick={() => history.push('/Tasks')}>SAIR</button>
         </div>
-        <h4 className="instruction">
+        <h4 className="instruction" >
           Associando palavra a imagem {'>>'} <br/>
         </h4>
         <h1></h1>     
