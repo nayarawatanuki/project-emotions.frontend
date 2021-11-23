@@ -182,14 +182,14 @@ function Task3() {
                     style={{marginRight: '6%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response1}
                     draggable={true}
-                    onTouchStart={(e)=> {
+                    onTouchStart={ondragstart}
+                    onDragStart={(e)=> {
                       if (window.navigator.vibrate) {
                         window.navigator.vibrate(200)
                       }
                       drag(e); 
                       setResponse(task.response1);
                     }}
-                    onDragStart={true}
                     >{task.response1}
                   </Label>
                 
