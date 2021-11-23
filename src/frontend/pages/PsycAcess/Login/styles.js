@@ -17,7 +17,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-    width: auto;
+    width: auto fit-content;
     height: auto 100%;
     margin: auto;
     display: center;
