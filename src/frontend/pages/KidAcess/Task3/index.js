@@ -219,6 +219,7 @@ function Task3() {
                       }
                       drag(e); 
                       setResponse(task.response3);
+                      drop(e);
                     }}
                     >{task.response3}
                   </Label>
