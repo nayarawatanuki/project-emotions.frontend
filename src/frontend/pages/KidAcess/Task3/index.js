@@ -179,7 +179,7 @@ function Task3() {
                 
                 <div className='row' style={{marginTop: '5%', justifyContent: 'center'}}>
                   <Label id="emotion1" name="emotion1" 
-                    style={{marginRight: '5%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
+                    style={{marginRight: '6%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response1}
                     draggable={true}
                     onTouchStart={true}
@@ -194,7 +194,7 @@ function Task3() {
                   </Label>
                 
 
-                  <Label id="emotion2" name="emotion2" style={{marginRight: '5%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
+                  <Label id="emotion2" name="emotion2" style={{marginRight: '6%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response2} 
                     draggable={true} 
                     onTouchStart={true}
@@ -226,7 +226,7 @@ function Task3() {
             )
           })}
 
-          <div style={{marginTop: '10%', justifyContent: 'right'}}>
+          <div className="row" style={{marginTop: '10%', justifyContent: 'right'}}>
             <button className="button button-save"
               onClick={(e) => {
                 swal({
