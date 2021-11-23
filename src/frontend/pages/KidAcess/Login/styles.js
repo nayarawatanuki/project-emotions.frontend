@@ -17,6 +17,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
+    content: width=device-width, initial-scale=1;
     width: fit-content;
     height: auto 100%;
     margin: auto;
