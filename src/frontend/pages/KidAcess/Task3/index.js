@@ -213,7 +213,7 @@ function Task3() {
             )
           })}
 
-          <Draggable>drag me</Draggable>
+          <Draggable><p>drag me</p></Draggable>
 
           <div className="row" style={{marginTop: '5%', justifyContent: 'right'}}>
             <button className="button button-save"
