@@ -82,7 +82,7 @@ class addKid extends Component {
         </nav>
         <Container>
           <Content>
-            <form encType='multipar/form-data'>
+            <form encType='multipar/form-data' content="width=device-width, initial-scale=1" fit-content="true">
               <div className="form-check">
                 <input type="checkbox" id="treatment" defaultValue="off"
                 className="form-check-input"

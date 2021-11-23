@@ -148,7 +148,7 @@ function addTask3 () {
         </nav>
         <Container>
           <Content>
-            <form encType='multipar/form-data'>
+            <form encType='multipar/form-data' content="width=device-width, initial-scale=1" fit-content="true">
               <div className="form-infoKid" style={{marginTop: "4%"}}>
                 <div className="form-group">
                   

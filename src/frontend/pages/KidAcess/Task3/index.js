@@ -150,9 +150,9 @@ function Task3() {
         <Content>
           {task.map((task) => {
             return (
-              <form encType='multipar/form-data' fit-content="true" key={task.id}>
+              <form encType='multipar/form-data' content="width=device-width, initial-scale=1" fit-content="true" key={task.id}>
                 <div className='row' fit-content="true" style={{marginTop: '2%', justifyContent: 'center'}}>
-                  <img className="img-responsive" display="center" content="width=device-width, initial-scale=1"  style={{ resize: 'auto', border: '5px double #000'}}
+                  <img className="img-responsive" display="center" content="width=device-width, initial-scale=1"  style={{ resize: 'auto'}}
                     onDragOver={(e)=> allowDrop(e)} 
                     onDrop={()=> {                       
                       if( response === task.emotion ) {                        
@@ -226,7 +226,7 @@ function Task3() {
             )
           })}
 
-          <div className="row" style={{marginTop: '5%', justifyContent: 'right'}}>
+          <div style={{marginTop: '10%', justifyContent: 'right'}}>
             <button className="button button-save"
               onClick={(e) => {
                 swal({
