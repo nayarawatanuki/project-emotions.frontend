@@ -83,6 +83,7 @@ function Task3() {
 
   async function drag(e) {
     await
+    e.dataTransfer.effectAllowed == 'move';
     e.dataTransfer.setData("object", e.target.id);
   }
 
