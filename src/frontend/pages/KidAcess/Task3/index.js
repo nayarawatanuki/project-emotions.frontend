@@ -187,11 +187,11 @@ function Task3() {
 
                 <div className='row' style={{marginTop: '5%', justifyContent: 'center'}}>
                 <Swipeable>
-                  <Label {...handlers} id="emotion1" name="emotion1" 
+                  <Label id="emotion1" name="emotion1" 
                     style={{marginRight: '4%', border: '5px double #ae8625', background: '-webkit-gradient(linear, left top, center top, from(#ae8625), to(#e6bc53)'}}
                     value={task.response1}
                     draggable={true}
-                    onTouchStart={true}
+                    onTouchStart={...handlers}
                     onDragStart={(e)=> {drag(e); setResponse(task.response1)}}
                     >{task.response1}
                   </Label>
