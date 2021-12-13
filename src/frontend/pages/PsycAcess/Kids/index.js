@@ -16,7 +16,7 @@ function Kids() {
         .then((response) => {
           setKids(response.data);
         });
-    }, window.location.reload(), []);
+    }, []);
 
     async function updateKid(){
 
