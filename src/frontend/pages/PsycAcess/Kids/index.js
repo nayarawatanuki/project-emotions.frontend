@@ -14,6 +14,7 @@ function Kids() {
     useEffect(() => {
         api.get('/listKids')
         .then((response) => {
+          window.location.reload();
           setKids(response.data);
         });
     }, []);
