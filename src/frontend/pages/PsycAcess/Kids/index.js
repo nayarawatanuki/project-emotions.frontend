@@ -12,12 +12,11 @@ function Kids() {
     const [kids, setKids] = useState([]);
 
     useEffect(() => {
-        window.location.reload();
         api.get('/listKids')
         .then((response) => {
           setKids(response.data);
         });
-    }, []);
+    }, window.location.reload(), []);
 
     async function updateKid(){
 
