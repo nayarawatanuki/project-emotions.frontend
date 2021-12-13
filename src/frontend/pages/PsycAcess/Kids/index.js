@@ -10,9 +10,9 @@ import KidList from '../../../components/mappings/KidList'
 
 function Kids() {
     const [kids, setKids] = useState([]);
+    window.location.reload(true);
 
     useEffect(() => {
-        window.location.reload(true);
         api.get('/listKids')
         .then((response) => {
           setKids(response.data);
