@@ -132,7 +132,7 @@ function Task3() {
 
   const sendTask = async () => {
     await create();
-    //updateTask();
+    updateTask();
     history.push('/Tasks');
   }
 
