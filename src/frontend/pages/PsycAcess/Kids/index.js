@@ -12,9 +12,9 @@ function Kids() {
     const [kids, setKids] = useState([]);
 
     useEffect(() => {
+        window.location.reload();
         api.get('/listKids')
         .then((response) => {
-          window.location.reload();
           setKids(response.data);
         });
     }, []);
