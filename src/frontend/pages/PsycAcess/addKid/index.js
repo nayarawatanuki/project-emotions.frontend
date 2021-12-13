@@ -153,7 +153,7 @@ class addKid extends Component {
                   </Link>
 
                   <Link to="/Kids" reload="true">
-                    <button onClick ={() => {this.createdKid;}} className="button button-success">Adicionar</button>
+                    <button onClick ={this.createdKid} className="button button-success">Adicionar</button>
                   </Link>
                 </div>
               </div>
